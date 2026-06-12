@@ -46,7 +46,7 @@ export function FinalStep() {
             className="absolute inset-0 overflow-y-auto no-scrollbar pb-24 flex flex-col items-center pt-10 scroll-smooth"
           >
             {/* Carousel */}
-            <div className="w-full flex overflow-x-auto snap-x snap-mandatory gap-6 px-10 pb-8 no-scrollbar scroll-pl-10">
+            <div className="w-full shrink-0 flex overflow-x-auto snap-x snap-mandatory gap-6 px-10 pb-8 no-scrollbar scroll-pl-10">
               {photos.map((src, i) => (
                 <motion.img 
                   key={i} 
@@ -67,7 +67,7 @@ export function FinalStep() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="mt-4 px-6 w-full max-w-sm mx-auto"
+              className="mt-4 px-6 w-full max-w-sm mx-auto shrink-0"
             >
               <div className="bg-neutral-900 p-6 rounded-[2rem] shadow-sm border border-neutral-800 text-center">
                 <h2 className="font-serif text-2xl text-red-500 italic mb-4 font-semibold">sou feliz há</h2>
@@ -97,7 +97,7 @@ export function FinalStep() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 1.5 }}
-              className="mt-10 font-sans text-[15px] leading-relaxed text-neutral-400 text-center px-8 flex flex-col gap-5"
+              className="mt-10 font-sans text-[15px] leading-relaxed text-neutral-400 text-center px-8 flex flex-col gap-5 shrink-0"
             >
               <p>
                 imagino que você esteja olhando pra telinha do seu celular agora comigo ao seu lado nesse dia dos namorados, exatamente do jeito que te vi quando me apaixonei por você, sorrindo.
@@ -112,7 +112,7 @@ export function FinalStep() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 2.5, type: "spring" }}
-              className="mt-16 text-red-600 flex justify-center w-full"
+              className="mt-16 text-red-600 flex justify-center w-full shrink-0"
             >
               <motion.button 
                  onClick={() => setShowFinal(true)}
