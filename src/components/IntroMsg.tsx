@@ -10,21 +10,23 @@ export function IntroMsg({ onNext }: { onNext: () => void }) {
 
   return (
     <div 
-      className="h-full bg-neutral-950 flex items-center justify-center p-8 text-center cursor-pointer relative" 
+      className="h-full bg-neutral-950 flex flex-col p-8 text-center cursor-pointer" 
       onClick={onNext}
     >
-       <motion.h1 
-         initial={{ opacity: 0, y: 20 }}
-         animate={{ opacity: 1, y: 0 }}
-         className="font-serif text-4xl text-red-600 italic leading-snug"
-       >
-         vamos ver se você conhece a gente...
-       </motion.h1>
+       <div className="flex-1 flex items-center justify-center">
+         <motion.h1 
+           initial={{ opacity: 0, y: 20 }}
+           animate={{ opacity: 1, y: 0 }}
+           className="font-serif text-4xl text-red-600 italic leading-snug"
+         >
+           vamos ver se você conhece a gente...
+         </motion.h1>
+       </div>
        <motion.div
          initial={{ opacity: 0 }}
          animate={{ opacity: 1 }}
          transition={{ delay: 2 }}
-         className="absolute bottom-10 left-0 right-0 flex justify-center pb-8"
+         className="h-16 flex items-end justify-center pb-4"
        >
          <div className="text-red-800/80 animate-pulse text-sm font-sans tracking-wide">
            toque na tela para começar

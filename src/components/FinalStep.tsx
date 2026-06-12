@@ -34,7 +34,7 @@ export function FinalStep() {
   ];
 
   return (
-    <div className={`h-full bg-neutral-950 relative scroll-smooth flex flex-col justify-start min-h-0 ${showFinal ? 'overflow-hidden' : 'overflow-y-auto no-scrollbar pb-24'}`}>
+    <div className="h-full w-full bg-neutral-950 relative overflow-hidden">
       <AnimatePresence mode="wait">
         {!showFinal ? (
           <motion.div 
@@ -43,7 +43,7 @@ export function FinalStep() {
             animate={{ opacity: 1 }} 
             exit={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
             transition={{ duration: 1.5, ease: "easeInOut" }} 
-            className="flex flex-col items-center pt-10"
+            className="absolute inset-0 overflow-y-auto no-scrollbar pb-24 flex flex-col items-center pt-10 scroll-smooth"
           >
             {/* Carousel */}
             <div className="w-full flex overflow-x-auto snap-x snap-mandatory gap-6 px-10 pb-8 no-scrollbar scroll-pl-10">
@@ -131,21 +131,21 @@ export function FinalStep() {
              key="finalScreen"
              initial={{ opacity: 0 }} 
              animate={{ opacity: 1 }} 
-             transition={{ duration: 2.5, ease: "linear" }}
-             className="absolute inset-0 z-50 bg-black flex flex-col items-center justify-center p-6 text-center"
+             transition={{ duration: 1.5, ease: "linear" }}
+             className="absolute inset-0 bg-black flex flex-col items-center justify-center p-6 text-center z-50"
            >
               <motion.h1 
                 initial={{ opacity: 0, scale: 0.9, y: -20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ delay: 1.5, duration: 2, ease: "easeOut" }}
-                className="font-serif text-[4.5rem] leading-[1.1] font-bold text-red-600 italic tracking-tight drop-shadow-[0_0_30px_rgba(220,38,38,0.6)] mb-12"
+                transition={{ delay: 0.5, duration: 1.5, ease: "easeOut" }}
+                className="font-serif text-[3.5rem] sm:text-[4.5rem] leading-[1.1] font-bold text-red-600 italic tracking-tight drop-shadow-[0_0_30px_rgba(220,38,38,0.6)] mb-12"
               >
                 EU TE AMOOO!
               </motion.h1>
               <motion.img 
                 initial={{ opacity: 0, scale: 0.8, y: 30 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ delay: 3, duration: 2.5, ease: "easeOut" }}
+                transition={{ delay: 2, duration: 2, ease: "easeOut" }}
                 src="https://i.ibb.co/TDqYyDsK/Whats-App-Image-2026-06-12-at-10-13-16.jpg" 
                 className="w-72 h-80 object-cover rounded-2xl border-[6px] border-red-950 shadow-[0_0_80px_rgba(153,27,27,0.8)]" 
                 alt="Final Love"
