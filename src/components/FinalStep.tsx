@@ -67,7 +67,7 @@ export function FinalStep() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="mt-4 px-6 w-full max-w-sm mx-auto shrink-0"
+              className="mt-12 px-6 w-full max-w-sm mx-auto shrink-0"
             >
               <div className="bg-neutral-900 p-6 rounded-[2rem] shadow-sm border border-neutral-800 text-center">
                 <h2 className="font-serif text-2xl text-red-500 italic mb-4 font-semibold">sou feliz há</h2>
